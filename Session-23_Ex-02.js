@@ -1,6 +1,7 @@
 let input = prompt("Nhap 10 so nguyen")
 let array = input.split(" ")
 let flag = 0;
+let index
 if (array.length > 10) {
     console.log(`Chi nhap 10 so nguyen!`);   
 }
@@ -12,9 +13,10 @@ else{
     for (let i = 0; i < array.length; i++) {
         if (max < array[i]) {
             max = array[i]
+            index = i
         }
     }
     console.log(`
         So lon nhat : ${max}
-        Vi tri : ${array.indexOf(max)}`);
+        Vi tri : ${index}`);
 }
